@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
-import { LandingPageBasic } from './pages/LandingPageBasic';
+import { HighConvertingLandingPage } from './pages/HighConvertingLandingPage';
 import { Products } from './pages/Products';
 import { ProductDetail } from './pages/ProductDetail';
 import { Checkout } from './pages/Checkout';
@@ -21,7 +21,7 @@ function App() {
         <Router>
           <Routes>
             {/* Landing page - no header/footer */}
-            <Route path="/" element={<LandingPageBasic />} />
+            <Route path="/" element={<HighConvertingLandingPage />} />
             
             {/* All other pages - with header/footer */}
             <Route path="/*" element={
