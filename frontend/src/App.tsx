@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { LandingPageBasic } from './pages/LandingPageBasic';
@@ -19,29 +19,31 @@ function App() {
     <AuthProvider>
       <CartProvider>
         <Router>
-          <div className="min-h-screen flex flex-col bg-gray-50">
-            <Routes>
-              <Route path="/" element={<LandingPageBasic />} />
-              <Route path="/*" element={
-                <>
-                  <Header />
-                  <main className="flex-grow">
-                    <Routes>
-                      <Route path="/products" element={<Products />} />
-                      <Route path="/product/:id" element={<ProductDetail />} />
-                      <Route path="/checkout/:id" element={<Checkout />} />
-                      <Route path="/dashboard" element={<Dashboard />} />
-                      <Route path="/admin" element={<Admin />} />
-                      <Route path="/login" element={<Login />} />
-                      <Route path="/signup" element={<Signup />} />
-                      <Route path="/success" element={<Success />} />
-                    </Routes>
-                  </main>
-                  <Footer />
-                </>
-              } />
-            </Routes>
-          </div>
+          <Routes>
+            {/* Landing page - no header/footer */}
+            <Route path="/" element={<LandingPageBasic />} />
+            
+            {/* All other pages - with header/footer */}
+            <Route path="/*" element={
+              <div className="min-h-screen flex flex-col bg-gray-50">
+                <Header />
+                <main className="flex-grow">
+                  <Routes>
+                    <Route path="/products" element={<Products />} />
+                    <Route path="/product/:id" element={<ProductDetail />} />
+                    <Route path="/checkout/:id" element={<Checkout />} />
+                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/admin" element={<Admin />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/signup" element={<Signup />} />
+                    <Route path="/success" element={<Success />} />
+                    <Route path="*" element={<Navigate to="/" replace />} />
+                  </Routes>
+                </main>
+                <Footer />
+              </div>
+            } />
+          </Routes>
         </Router>
       </CartProvider>
     </AuthProvider>
