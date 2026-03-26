@@ -5,6 +5,7 @@ import {
   ClockIcon,
   CurrencyDollarIcon,
   QuestionMarkCircleIcon,
+  ArrowRightIcon,
 } from '@heroicons/react/24/outline';
 
 export const ProblemSection: React.FC = () => {

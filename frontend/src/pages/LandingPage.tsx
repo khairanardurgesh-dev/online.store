@@ -7,7 +7,7 @@ import {
   UserGroupIcon,
   CpuChipIcon,
   ShieldCheckIcon,
-  CreditCardIcon
+  CreditCardIcon,
   RocketLaunchIcon
 } from '@heroicons/react/24/solid';
 import { 
@@ -21,7 +21,7 @@ import { Hero } from '../components/Hero/Hero';
 import { ProblemSection } from '../components/ProblemSection/ProblemSection';
 import { SolutionSection } from '../components/SolutionSection/SolutionSection';
 import { TestimonialSection } from '../components/TestimonialSection/TestimonialSection';
-import { HowItWorksFinal } from '../components/HowItWorks/HowItWorksFinal';
+import { HowItWorksWorking } from '../components/HowItWorks/HowItWorksWorking';
 
 export const LandingPage: React.FC = () => {
   return (
@@ -39,7 +39,7 @@ export const LandingPage: React.FC = () => {
       <TestimonialSection />
 
       {/* How It Works */}
-      <HowItWorksFinal />
+      {/* <HowItWorksWorking /> */}
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-slate-900">

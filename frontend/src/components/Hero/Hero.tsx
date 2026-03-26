@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { PlayIcon, SparklesIcon } from '@heroicons/react/24/outline';
+import { PlayIcon, SparklesIcon, CheckCircleIcon, ShieldCheckIcon, UserGroupIcon } from '@heroicons/react/24/outline';
 
 export const Hero: React.FC = () => {
   return (

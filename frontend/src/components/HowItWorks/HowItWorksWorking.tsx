@@ -2,42 +2,37 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   PlayIcon,
-  ArrowRightIcon,
-  CheckCircleIcon,
   RocketLaunchIcon,
-  CreditCardIcon,
+  CheckCircleIcon,
   CurrencyDollarIcon,
+  CreditCardIcon,
 } from '@heroicons/react/24/outline';
 
-export const HowItWorksFinal: React.FC = () => {
+export const HowItWorksWorking: React.FC = () => {
   const steps = [
     {
       number: "01",
       title: "Sign Up & Connect",
       description: "Create your account and connect your existing tools and repositories",
-      icon: PlayIcon,
-      color: "blue"
+      icon: PlayIcon
     },
     {
       number: "02", 
       title: "AI Analysis",
       description: "Our AI analyzes your skills and identifies profitable digital product opportunities",
-      icon: RocketLaunchIcon,
-      color: "purple"
+      icon: RocketLaunchIcon
     },
     {
       number: "03",
       title: "Create & Deploy", 
       description: "Build and launch your digital products with our one-click deployment system",
-      icon: CheckCircleIcon,
-      color: "green"
+      icon: CheckCircleIcon
     },
     {
       number: "04",
       title: "Earn & Scale",
       description: "Start generating revenue from day one with built-in marketing and payment processing",
-      icon: CurrencyDollarIcon,
-      color: "yellow"
+      icon: CurrencyDollarIcon
     }
   ];
 
@@ -50,18 +45,6 @@ export const HowItWorksFinal: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          {/* Section Badge */}
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.3 }}
-            className="inline-flex items-center bg-orange-100 text-orange-600 rounded-full px-4 py-2 mb-8"
-          >
-            <RocketLaunchIcon className="w-6 h-6 mr-2" />
-            <span className="font-semibold">How It Works in 4 Simple Steps</span>
-          </motion.div>
-
-          {/* Headline */}
           <motion.h2
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -71,7 +54,6 @@ export const HowItWorksFinal: React.FC = () => {
             From Zero to Profitable Digital Business in Under 7 Days
           </motion.h2>
 
-          {/* Steps */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {steps.map((step, index) => (
               <motion.div
@@ -96,7 +78,6 @@ export const HowItWorksFinal: React.FC = () => {
             ))}
           </div>
 
-          {/* Bottom CTA */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
