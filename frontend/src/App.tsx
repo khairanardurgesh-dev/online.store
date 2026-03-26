@@ -20,21 +20,27 @@ function App() {
       <CartProvider>
         <Router>
           <div className="min-h-screen flex flex-col bg-gray-50">
-            <Header />
-            <main className="flex-grow">
-              <Routes>
-                <Route path="/" element={<LandingPageBasic />} />
-                <Route path="/products" element={<Products />} />
-                <Route path="/product/:id" element={<ProductDetail />} />
-                <Route path="/checkout/:id" element={<Checkout />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/admin" element={<Admin />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/signup" element={<Signup />} />
-                <Route path="/success" element={<Success />} />
-              </Routes>
-            </main>
-            <Footer />
+            <Routes>
+              <Route path="/" element={<LandingPageBasic />} />
+              <Route path="/*" element={
+                <>
+                  <Header />
+                  <main className="flex-grow">
+                    <Routes>
+                      <Route path="/products" element={<Products />} />
+                      <Route path="/product/:id" element={<ProductDetail />} />
+                      <Route path="/checkout/:id" element={<Checkout />} />
+                      <Route path="/dashboard" element={<Dashboard />} />
+                      <Route path="/admin" element={<Admin />} />
+                      <Route path="/login" element={<Login />} />
+                      <Route path="/signup" element={<Signup />} />
+                      <Route path="/success" element={<Success />} />
+                    </Routes>
+                  </main>
+                  <Footer />
+                </>
+              } />
+            </Routes>
           </div>
         </Router>
       </CartProvider>
