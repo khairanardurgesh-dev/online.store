@@ -21,7 +21,7 @@ import { Hero } from '../components/Hero/Hero';
 import { ProblemSection } from '../components/ProblemSection/ProblemSection';
 import { SolutionSection } from '../components/SolutionSection/SolutionSection';
 import { TestimonialSection } from '../components/TestimonialSection/TestimonialSection';
-import { HowItWorksWorking } from '../components/HowItWorks/HowItWorksWorking';
+// import { HowItWorksWorking } from '../components/HowItWorks/HowItWorksWorking';
 
 export const LandingPage: React.FC = () => {
   return (

@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
-import { LandingPageSimple } from './pages/LandingPageSimple';
+import { LandingPageBasic } from './pages/LandingPageBasic';
 import { Products } from './pages/Products';
 import { ProductDetail } from './pages/ProductDetail';
 import { Checkout } from './pages/Checkout';
@@ -23,7 +23,7 @@ function App() {
             <Header />
             <main className="flex-grow">
               <Routes>
-                <Route path="/" element={<LandingPageSimple />} />
+                <Route path="/" element={<LandingPageBasic />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/product/:id" element={<ProductDetail />} />
                 <Route path="/checkout/:id" element={<Checkout />} />
